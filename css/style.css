@@ -1,0 +1,89 @@
+*{
+    margin: 0px;
+}
+
+header{
+    text-align: center;
+}
+
+.logo{
+    height: 100px;
+}
+
+.enterprise_name{
+    color: #D04F50;
+}
+
+.search{
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #E7E7E7;
+    width: 80%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+#site-search{
+    border: none;
+    height: 30px;
+    width: 100%;
+    background-color: #E7E7E7;
+}
+
+.fa-magnifying-glass{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.filter{
+    display: flex;
+    margin-left: 10%;
+}
+
+.dropdown{
+    margin-top: 1.5rem;
+    margin-right: 3%;
+}
+
+main{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.recipes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card{
+    width: 20rem; 
+    margin-top: 2rem;
+}
+
+.card-img-top{
+    height: 10rem;
+    background-color:#C7BEBE ;
+}
+
+.flex{
+    display: flex ;
+    justify-content: space-between;
+    max-height: 100%;
+}
+.card-body{
+    height:13rem ;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-description{
+    font-size: 0.7rem;
+    width: 50%;
+
+}

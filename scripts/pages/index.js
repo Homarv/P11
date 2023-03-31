@@ -23,18 +23,34 @@ function filterRecipes(inputsearch, recipes) {
       DescriptionOfRecipe.indexOf(searchTerm) > -1) {
         ArrayTest.push(recipes[i])
     } else {
-
     }
   }
-  displayDataRecipes(ArrayTest)
-
+  if(ArrayTest.length === 0){
+    displayMessageNoRecipe()
+  }
+  else{
+    displayDataRecipes(ArrayTest)
+  }
 }
 
   // lorsqu'un utilisateur tape dans les champs de recherche Principal
-  let inputsearch = document.querySelector('#site-search');
-  inputsearch.addEventListener('keyup', function() {
+let inputsearch = document.querySelector('#site-search');
+inputsearch.addEventListener('keyup', function() {
+  if(inputsearch.value.length >= 3){
+    console.log("recipes")
     filterRecipes(inputsearch, recipes);
   }
-  );
+  else{
+    displayDataRecipes(recipes)
+  }
+});
 
 
+function displayMessageNoRecipe(){
+  const recipesSection = document.querySelector(".recipes");
+  recipesSection.innerHTML= '';
+  const noRecipeModel = noRecipeFactory();
+  recipesSection.appendChild(noRecipeModel);
+}
+
+displayDataRecipes(recipes)

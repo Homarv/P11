@@ -20,4 +20,15 @@ function recipeFactory(recipe){
   return (article);
 }
 
-
+function noRecipeFactory(){
+   
+  const article = document.createElement( 'article' );
+  article.innerHTML = 
+  `
+  <div class="no-recip">
+    <p>Aucune recette ne correspond à votre critère… vous pouvez
+  chercher « tarte aux pommes », « poisson », etc. </p>
+  </div>
+  `;
+  return (article);
+}

@@ -11,7 +11,7 @@ function recipeFactory(recipe){
       <p> <i class="fa-regular fa-clock"></i> ${recipe.time}</p>
     </div>
       <div class="flex">
-        
+        <p class="ingredients-list"></p>
         <p class="card-description">${recipe.description}</p>
       </div>
   </div>

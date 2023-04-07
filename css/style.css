@@ -43,16 +43,59 @@ ul{
     font-size: 1.5rem;
     margin-right: 1rem;
 }
+/* FILTER */ 
 
-.filter{
+.filter {
     display: flex;
     margin-left: 10%;
-}
+    margin-right: 10%;
+    position: relative;
+  }
+  
+  .filter-containt {
+    display: flex;
+    flex: 1;
+  }
+  
+  .filter-input {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+  
+  #ingredients-select {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    position: absolute;
+    display: none;
+    z-index: 999;
+    background-color: #3381F7;
+    color: #E7E7E7;
+    flex: 1;
+    width: 50%;
+    top: 100%; 
+    left: 0; 
+  }
 
-.dropdown{
-    margin-top: 1.5rem;
-    margin-right: 3%;
-}
+  .input-ingredient{
+    background-color: #3381F7;
+    color: white;
+    pointer-events: auto;
+
+  }
+  
+  .recipe-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .recipe-item {
+    flex-basis: calc(33.33% - 10px);
+    flex-grow: 1;
+  }
+
+/* MAIN */ 
 
 main{
     margin-left: 10%;
@@ -100,4 +143,18 @@ main{
 
 .ingredients-list > ul {
     list-style: none;
+}
+
+/* voir si utilisé en fin de développement */
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
 }

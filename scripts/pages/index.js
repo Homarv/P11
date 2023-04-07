@@ -20,7 +20,7 @@ function displayDataRecipes(Arraytest){
     for (let k = 0; k < recipe.ingredients.length; k++) {
       const ingredientcaracteristic = recipe.ingredients[k];
       //console.log(ingredientcaracteristic)
-      // Créer un élément de liste pour l'ingrédient et l'ajouter à la liste dans votre page HTML
+      // Créer un élément de liste pour l'ingrédient et l'ajouter à la liste dans la page HTML
       const li = document.createElement('li');
       if (ingredientcaracteristic.unit === undefined & ingredientcaracteristic.quantity === undefined ){
         li.innerHTML = `<strong> ${ingredientcaracteristic.ingredient}</strong>  `;
@@ -34,7 +34,7 @@ function displayDataRecipes(Arraytest){
       ingredientsList.appendChild(li);
     }
   
-    // Ajouter la liste d'ingrédients au conteneur d'ingrédients correspondant dans votre page HTML
+    // Ajouter la liste d'ingrédients au conteneur d'ingrédients correspondant dans la page HTML
     ingredientsContainer[j].appendChild(ingredientsList);
   }
 }
@@ -63,11 +63,11 @@ function filterRecipes(inputsearch, recipes) {
   // si la recherche correspond à une ou plusieurs recettes, les affiches 
   else{
     displayDataRecipes(ArrayTest)
-    dropdownMenuData(ArrayTest)
+   // dropdownMenuData(ArrayTest)
   }
 }
 
-  // lorsqu'un utilisateur tape dans les champs de recherche Principal
+// lorsqu'un utilisateur tape dans les champs de recherche Principal
 let inputsearch = document.querySelector('#site-search');
 inputsearch.addEventListener('keyup', function() {
   // lance le filtre si la longueur de la recherche est supérieur à 3 caractères 
@@ -78,7 +78,7 @@ inputsearch.addEventListener('keyup', function() {
   // sinon affiche l'ensemble des recettes 
   else{
     displayDataRecipes(recipes)
-    console.log(dropdownMenuData(recipes))
+ //   console.log(dropdownMenuData(recipes))
   }
 });
 
@@ -91,4 +91,4 @@ function displayMessageNoRecipe(){
 }
 
 displayDataRecipes(recipes);
-dropdownMenuData(recipes);
+//dropdownMenuData(recipes);

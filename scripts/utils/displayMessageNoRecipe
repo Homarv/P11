@@ -1,0 +1,6 @@
+function displayMessageNoRecipe(){
+  const recipesSection = document.querySelector(".recipes");
+  recipesSection.innerHTML= '';
+  const noRecipeModel = noRecipeFactory();
+  recipesSection.appendChild(noRecipeModel);
+}

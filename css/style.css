@@ -15,6 +15,13 @@ ul{
     padding: 0%;
 }
 
+button{
+    border: none;
+    background-color: transparent;
+    color:white;
+    padding: 10px;
+}
+
 .enterprise_name{
     color: #D04F50;
 }
@@ -29,7 +36,6 @@ ul{
     align-items: center;
     justify-content: center;
     margin-top: 1.5rem;
-    
 }
 
 #site-search{
@@ -43,57 +49,150 @@ ul{
     font-size: 1.5rem;
     margin-right: 1rem;
 }
-/* FILTER */ 
+
+.first-color{
+    background-color: #3381F7;
+    color: white;
+}
+
+.second-color{
+    background-color: #ED6454;
+    color: white;
+}
+
+.third-color{
+    background-color: #68DAA4;
+    color: white;
+}
+/********** FILTER *****************************/ 
 
 .filter {
+    margin-top: 2rem;
     display: flex;
     margin-left: 10%;
     margin-right: 10%;
     position: relative;
   }
-  
-  .filter-containt {
-    display: flex;
-    flex: 1;
-  }
-  
-  .filter-input {
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-  }
-  
-  #ingredients-select {
-    display: flex;
+  /*BUTTON********************/
+ 
+.filter-containt {
+display: flex;
+border-radius: 7px 7px 7px 7px;
+margin-right: 2rem;
+}
+
+.filter-button{
+display: flex;
+align-items: center;
+margin: 0.5rem;
+}
+
+.filter-input {
+justify-content: space-between;
+flex: 1;
+display: none;
+align-items: center;
+margin: 0.5rem;
+
+}
+
+.filter-input  i {
+color: white;
+}
+
+#ingredients-select{
+display: none;
+flex-wrap: wrap;
+list-style: none;
+position: absolute;
+z-index: 999;
+background-color: #3381F7;
+color: #E7E7E7;
+flex: 1;
+width: 50%;
+top: 100%; 
+}
+
+.input-ingredient{
+background-color: #3381F7;
+color: white;
+pointer-events: auto;
+}
+
+.recipe-container {
+display: flex;
+justify-content: space-between;
+}
+
+.recipe-item {
+flex-basis: calc(33.33% - 10px);
+}
+
+.ingredients-list{
+font-size: 0.7rem;
+width: 50%;
+margin-right: 1rem;
+}
+
+.ingredients-list > ul {
+    list-style: none;
+}
+
+#ustensils-select{
+    display: none;
     flex-wrap: wrap;
     list-style: none;
     position: absolute;
-    display: none;
     z-index: 999;
-    background-color: #3381F7;
+    background-color: #68DAA4;
+    flex: 1;
+    width: 50%;
+    top: 100%;  
+  }
+
+.input-ustensil{
+  background-color:#68DAA4;
+}
+
+#appliances-select{
+    display: none;
+    flex-wrap: wrap;
+    list-style: none;
+    position: absolute;
+    z-index: 999;
+    background-color: #ED6454;
     color: #E7E7E7;
     flex: 1;
     width: 50%;
-    top: 100%; 
-    left: 0; 
-  }
+    top: 100%;  
+}
 
-  .input-ingredient{
-    background-color: #3381F7;
-    color: white;
-    pointer-events: auto;
+.input-appliance{
+    background-color:#ED6454;
+}
 
-  }
-  
-  .recipe-container {
+.ustensil-list{
     display: flex;
-    justify-content: space-between;
-  }
-  
-  .recipe-item {
-    flex-basis: calc(33.33% - 10px);
-    flex-grow: 1;
-  }
+    flex-wrap: wrap;
+    width: 30%;
+    margin-left: 1rem;
+}
+
+.appliance-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    margin-left: 1rem;
+}
+
+.ingredient-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    margin-left: 1rem;
+}
+
+.appliance-list{}
 
 /* MAIN */ 
 
@@ -135,15 +234,6 @@ main{
 
 }
 
-.ingredients-list{
-    font-size: 0.7rem;
-    width: 50%;
-    margin-right: 1rem;
-}
-
-.ingredients-list > ul {
-    list-style: none;
-}
 
 /* voir si utilisé en fin de développement */
 .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

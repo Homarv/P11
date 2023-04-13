@@ -28,30 +28,47 @@
 
     <section class="filter">
       
-      <div class="filter-containt">
-        <div class="filter-button">
+      <div class="filter-containt first-color">
+        <div class="filter-button first-color">
           <button class="ingredient-button" type="button">
             Ingrédient
           </button>
-          <i class="fa-solid fa-chevron-down"></i>  
+          <i class="fa-solid fa-chevron-down first-color"></i>  
         </div>
-      </div>
-      <div>
+        <div class="filter-input">
+          <input type="text" class="form-control input-ingredient" placeholder="Rechercher un ingrédient">
+          <i class="fa-solid fa-chevron-up"></i>  
+        </div>
         <ul id="ingredients-select"></ul>
       </div>
  
-
-    <div class="filter-containt">
-      <div class="filter-button">
-        <button class="ingredient-button" type="button">
-          Ingrédient
-        </button>
-        <i class="fa-solid fa-chevron-down"></i>  
+      <div class="filter-containt second-color">
+        <div class="filter-button">
+          <button class="ingredient-button" type="button">
+            Appareils
+          </button>
+          <i class="fa-solid fa-chevron-down"></i>  
+        </div>
+        <div class="filter-input">
+          <input type="text" class="form-control input-appliance" placeholder="Rechercher un appareil">
+          <i class="fa-solid fa-chevron-up second-color"></i>  
+        </div>
+        <ul id="appliances-select"></ul>
       </div>
-        <ul id="ingredients-select"></ul>
+        
+      <div class="filter-containt third-color">
+        <div class="filter-button">
+          <button class="ingredient-button" type="button">
+            Ustensils
+          </button>
+          <i class="fa-solid fa-chevron-down"></i>  
+        </div>
+        <div class="filter-input">
+          <input type="text" class="form-control input-ustensil" placeholder="Rechercher un ustensil">
+          <i class="fa-solid fa-chevron-up"></i>  
+        </div>
+        <ul id="ustensils-select"></ul>
       </div>
-    </div>
-      
 
     </section>
 
@@ -64,6 +81,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="../data/recipes.js"></script>
     <script src="../scripts/utils/filter.js"></script>
+    <script src="../scripts/utils/displayMessageNoRecipe"></script>
     <script src="../scripts/factories/recipes.js"></script>
     <script src="../scripts/factories/dropdownmenu.js"></script>
     <script src="../scripts/pages/index.js"></script>

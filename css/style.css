@@ -64,6 +64,26 @@ button{
     background-color: #68DAA4;
     color: white;
 }
+/********** TAG *****************************/ 
+
+.tag{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-btn{
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+}
+
+.fa-circle-xmark{
+    color: white;
+    margin-left: 0.4rem;
+}
+
 /********** FILTER *****************************/ 
 
 .filter {
@@ -93,11 +113,7 @@ flex: 1;
 display: none;
 align-items: center;
 margin: 0.5rem;
-
-}
-
-.filter-input  i {
-color: white;
+width: 34rem;
 }
 
 #ingredients-select{
@@ -109,8 +125,9 @@ z-index: 999;
 background-color: #3381F7;
 color: #E7E7E7;
 flex: 1;
-width: 50%;
-top: 100%; 
+width: 35rem;
+top: 90%; 
+border-radius: 0 0 7px 7px;
 }
 
 .input-ingredient{
@@ -124,20 +141,6 @@ display: flex;
 justify-content: space-between;
 }
 
-.recipe-item {
-flex-basis: calc(33.33% - 10px);
-}
-
-.ingredients-list{
-font-size: 0.7rem;
-width: 50%;
-margin-right: 1rem;
-}
-
-.ingredients-list > ul {
-    list-style: none;
-}
-
 #ustensils-select{
     display: none;
     flex-wrap: wrap;
@@ -146,8 +149,9 @@ margin-right: 1rem;
     z-index: 999;
     background-color: #68DAA4;
     flex: 1;
-    width: 50%;
-    top: 100%;  
+    top: 90%; 
+    width: 35rem;
+    border-radius: 0 0 7px 7px;
   }
 
 .input-ustensil{
@@ -163,8 +167,9 @@ margin-right: 1rem;
     background-color: #ED6454;
     color: #E7E7E7;
     flex: 1;
-    width: 50%;
-    top: 100%;  
+    width: 35rem;
+    top: 90%; 
+    border-radius: 0 0 7px 7px;
 }
 
 .input-appliance{
@@ -192,7 +197,6 @@ margin-right: 1rem;
     margin-left: 1rem;
 }
 
-.appliance-list{}
 
 /* MAIN */ 
 
@@ -234,6 +238,15 @@ main{
 
 }
 
+.ingredients-list{
+    font-size: 0.7rem;
+    width: 50%;
+    margin-right: 1rem;
+    }
+    
+.ingredients-list > ul {
+    list-style: none;
+}
 
 /* voir si utilisé en fin de développement */
 .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

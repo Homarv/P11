@@ -19,15 +19,13 @@ function filterRecipes(inputsearch, recipes) {
   const searchTerm = inputsearch.value.toLowerCase();
   // pour chaque option de cette
   let ArrayOfRecipes = []
-  for (var i = 0; i < recipes.length; i++) {
-    let NameOfRecipe = recipes[i].name.toLowerCase();
-    let DescriptionOfRecipe = recipes[i].description;
-    // si le texte de l'input contient le terme de recherche, ajoute la recette au tableau des recettes
-    if (NameOfRecipe.indexOf(searchTerm) > -1 || 
-      DescriptionOfRecipe.indexOf(searchTerm) > -1) {
-        ArrayOfRecipes.push(recipes[i])
+  recipes.forEach((recipe) => {
+    const nameOfRecipe = recipe.name.toLowerCase();
+    const descriptionOfRecipe = recipe.description;
+    if (nameOfRecipe.includes(searchTerm) || descriptionOfRecipe.includes(searchTerm)) {
+      ArrayOfRecipes.push(recipe);
     }
-  }
+  });
   // si la recherche ne correspond à aucune recette, lance la fonction de message d'erreur 
   if(ArrayOfRecipes.length === 0){
     displayMessageNoRecipe()

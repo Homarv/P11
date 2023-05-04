@@ -7,12 +7,11 @@ function generateIngredientsList(selectElement, optionsList) {
     optionElement.className ="ingredient-list"
     optionElement.textContent = option;
    //Si un tag créé a la même valeur que l'option, fait disparaître l'option de la liste 
-    for (let i =0 ; i < allTagArray.length ; i++){
-      const tag = allTagArray[i]
-      if (option === tag){
-        optionElement.style.display ="none "
-      }
-     }
+   allTagArray.forEach((tag) => {
+    if (option === tag) {
+      optionElement.style.display = "none";
+    }
+  });
     selectElement.appendChild(optionElement);
     recipeItems.push(optionElement)
   });
@@ -29,12 +28,11 @@ function generateAppliancesList(selectElement, optionsList) {
     optionElement.className ="appliance-list"
     optionElement.textContent = option;
    //Si un tag créé a la même valeur que l'option, fait disparaître l'option de la liste 
-   for (let i =0 ; i < allTagArray.length ; i++){
-    const tag = allTagArray[i]
-    if (option === tag){
-      optionElement.style.display ="none "
+   allTagArray.forEach((tag) => {
+    if (option === tag) {
+      optionElement.style.display = "none";
     }
-   }
+  });
     selectElement.appendChild(optionElement);
     recipeItems.push(optionElement)
   });
@@ -51,12 +49,11 @@ function generateUstensilsList(selectElement, optionsList) {
     optionElement.className ="ustensil-list"
     optionElement.textContent = option;
    //Si un tag créé a la même valeur que l'option, fait disparaître l'option de la liste 
-   for (let i =0 ; i < allTagArray.length ; i++){
-    const tag = allTagArray[i]
-    if (option === tag){
-      optionElement.style.display ="none "
+   allTagArray.forEach((tag) => {
+    if (option === tag) {
+      optionElement.style.display = "none";
     }
-   }
+  });
     selectElement.appendChild(optionElement);
     recipeItems.push(optionElement)
   });
